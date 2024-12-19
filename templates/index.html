@@ -14,15 +14,9 @@
       <p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, arcu vitae eleifend aliquam, magna ligula lobortis magna, quis auctor mi nisl ac libero. Maecenas et lectus sagittis, euismod augue at, tristique ex. Ut in elementum metus. Nullam laoreet augue sed pharetra semper. Ut id erat ac velit hendrerit scelerisque. Nullam id diam vestibulum, pharetra felis eget, egestas justo. Nam feugiat velit sit amet nisl aliquam lacinia. Duis a neque lorem. In auctor erat nisi, sit amet posuere est molestie quis. In hac habitasse platea dictumst. Quisque imperdiet ornare iaculis. Mauris tincidunt, eros sit amet venenatis aliquet, purus risus euismod ligula, sed porttitor justo lorem et dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque nec ipsum odio. Curabitur pulvinar porttitor efficitur. Quisque ac sem non est molestie pharetra non ultricies quam.
       </p>
       <h2 class='text-center mt-2 mb-4'>Open Positions</h2>
-      <div style="margin-bottom:16px;">
+      <div>
         {% for job in jobs %}
-          <div>
-            <h4 style="color: rgb(120,120,120); margin-bottom: 4px">{{job['title']}}</h4>
-            <div><b>Location:</b> {{job['location']}}</div>
-            {% if 'salary' in job %}
-              <div><b>Salary:</b> {{job['salary']}}</div>
-            {% endif %}
-          </div>
+          {%include 'jobitem.html' %}
         {% endfor %}
       </div>
       <div style='text-align:center'>
